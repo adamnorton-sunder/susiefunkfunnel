@@ -1,0 +1,64 @@
+<ion-content>
+  <div style="width: 100vw; border: 28px solid #d0627f; background-color: #f7f2f4; display: grid; place-items: center;">
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+      <div style="display: grid; place-items: center end; letter-spacing: 10px;">SUSIE FUNK</div>
+      <div style="display: grid; place-items: center;">
+        <img src="../../assets/bouquet.png" style="height: 200px;">
+      </div>
+      <div style="display: grid; place-items: center start; letter-spacing: 10px;">COACHING</div>
+    </div>
+
+    <section *ngIf="!showForm" style="display: grid; grid-template-columns: 1fr 1fr; padding: 20px 200px 35px 200px; gap: 30px;">
+      <div>
+        <div>
+          <h1>Learn How To <i>Actually</i> Influence Your Adult Children For Good</h1>
+        </div>
+        <div>
+
+        </div>
+      </div>
+
+      <div>
+        <h3>This is next level motherhood and you need to be equipped to make the difference you were born to make</h3>
+        <p>The "8 Step Guide to Really Influence your Adult Children for Good" has all the tools you'll need to be a
+          force
+          for good
+          in the lives of those you love most (or want to love most!).
+        </p>
+        <button class="btn" (click)="toggleShowForm()">
+          Download for FREE ($39 Value)
+        </button>
+      </div>
+    </section>
+
+    <section *ngIf="showForm" style="height: auto; width: 600px; border: 1px solid #eeeeee; border-radius: 20px; padding: 30px; box-shadow: 0 0 30px #00000020; margin: 30px 0px;">
+      <div style="display: grid; place-items: center start;">
+      <button class="back-btn" (click)="toggleShowForm()">Back</button>
+    </div>
+      <h2>The FREE 8 Step Guide to Really Influence Your Adult Children For Good ($39 Value)</h2>
+      <h5 style="margin-bottom: 20px;">It's time to level up and live a life of influence, take back the leadership role in your life, and make your life attractive, enticing, and full of love.</h5>
+
+      <ion-label>Name*</ion-label>
+      <ion-input [(ngModel)]="name" style="margin: 10px 0;" type="text" placeholder="Full Name"></ion-input>
+        
+      <ion-label>Email*</ion-label>
+      <ion-input [(ngModel)]="email" style="margin: 10px 0;" type="email" placeholder="Email"></ion-input>
+
+      <div style="display: grid; place-items: center;">
+      <button class="btn" (click)="processDownloadClick()">
+        Download PDF
+      </button>
+    </div>
+      
+    </section>
+
+    <div>
+      <img src="../../assets/Susie_Funk_logoAsset 5.png" style="height: 100px;">
+    </div>
+
+    <div style="display: grid; place-items: center;">
+      <p style="font-size: 10px;">© 2022 Susie Funk Coaching - All rights reserved</p>
+    </div>
+  </div>
+</ion-content>

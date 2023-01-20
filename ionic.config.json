@@ -1,0 +1,7 @@
+{
+  "name": "SusieFunkFunnel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
